@@ -1,7 +1,7 @@
 version: "2"
 services:
   nacos:
-    image: nacos/nacos-server:${NACOS_VERSION}
+    image: nacos/nacos-server:1.4.2
     container_name: nacos-standalone-mysql
     env_file:
       - ../env/nacos-standlone-mysql.env
@@ -23,7 +23,7 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - "3307:3307"
 #  prometheus:
 #    container_name: prometheus
 #    image: prom/prometheus:latest
